@@ -136,8 +136,9 @@ const ROTEIRO = [
     linhas: [
       { t: 'O que era pra ser um simples beijo se tornou dias seguidos de conversas, do bom-dia ao boa-noite.' },
       { t: 'O tempo foi passando, começamos a dividir nossa rotina e, quando percebemos, éramos parte um do outro.' },
-      { t: 'Nossas rotinas se cruzaram: você na correria da loja, lidando com diferentes tipos de pessoas.' },
-      { t: 'Eu lidando com os mais variados números. E, mesmo assim, nossa sintonia continuava sólida.', e: 'forte' }
+      { t: 'Nossas rotinas se cruzaram: você na correria da loja, lidando com diferentes tipos de pessoas. Resolvendo problemas da sua casa, carregando a responsabilidade de mãe.' },
+      { t: 'Eu lidando com os mais variados números, meus projetos, meu mestrado e todas as minhas responsabilidades.' },
+      { t: 'E, mesmo assim, nossa sintonia continuava sólida.', e: 'forte' }
     ]
   },
   {
@@ -146,7 +147,6 @@ const ROTEIRO = [
       { t: 'Você tinha um nome só seu pra me chamar.' },
       { t: '🧩', e: 'emoji' },
       { t: 'Autistinha.', e: 'apelido' },
-      { t: 'E eu deixei, porque era você.', e: 'suave' },
       { t: 'Às vezes eu ainda escuto, do nada. É estranho como uma pessoa inventa um jeito de te chamar e depois vai embora levando o barulho dela.', e: 'forte' }
     ]
   },

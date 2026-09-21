@@ -184,13 +184,15 @@ O recorte é tipografia de verdade, não imagem. Explico no README por quê.
 >
 > O tempo foi passando, começamos a dividir nossa rotina e, quando percebemos, éramos parte um do outro.
 >
-> Nossas rotinas se cruzaram: você na correria da loja, lidando com diferentes tipos de pessoas, e eu lidando com os mais variados números. Mas nossa sintonia continuava sólida.
+> Nossas rotinas se cruzaram: você na correria da loja, lidando com diferentes tipos de pessoas. Resolvendo problemas da sua casa, carregando a responsabilidade de mãe.
+>
+> Eu lidando com os mais variados números, meus projetos, meu mestrado e todas as minhas responsabilidades.
+>
+> E, mesmo assim, nossa sintonia continuava sólida.
 
 ## 12. O apelido
 
 > Você me chamava de um jeito que era só seu. Ninguém nunca me chamou assim.
->
-> E eu deixei, porque era você.
 >
 > Às vezes eu ainda escuto, do nada, quando não estou esperando.
 >

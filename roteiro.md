@@ -312,13 +312,11 @@ que eles fizeram.
 >
 > Eu oro por você, pela sua família, pelos seus filhos. Oro pra que onde você estiver, você esteja bem.
 >
-> Eu sei que você vai estar. Você sempre esteve.
+> Eu sei que você vai estar. Você sempre fica. Você é uma boa pessoa, eu sei disso.
 
 ## 21. F, de Força
 
-> Falta uma coisa. E é a mais importante de todas.
->
-> Flávia começa com F. Por muito tempo, pensei que esse F fosse de flores, porque você sempre encontrou um jeito de florescer.
+> Por muito tempo, pensei que esse F fosse de flores, porque você sempre encontrou um jeito de florescer.
 >
 > Mas, olhando para a sua história, eu sei que ele é de outra coisa.
 >

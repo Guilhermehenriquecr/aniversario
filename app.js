@@ -317,14 +317,12 @@ const ROTEIRO = [
       { t: 'O que eu sinto hoje tem outra forma. Mas tudo o que foi bom ficou. Pode ter certeza disso.' },
       { t: 'Eu só queria deixar essas palavras aqui, com bastante sobriedade e maturidade sobre a nossa história.' },
       { t: 'Eu oro por você, pela sua família, pelos seus filhos. Oro pra que onde você estiver, você esteja bem.', e: 'forte' },
-      { t: 'Eu sei que você vai estar. Você sempre esteve.', e: 'forte' }
+      { t: 'Eu sei que você vai estar. Você sempre fica. Você é uma boa pessoa, eu sei disso.', e: 'forte' }
     ]
   },
   {
     id: 'fdeforca',
     linhas: [
-      { t: 'Falta uma coisa. E é a mais importante de todas.' },
-      { t: 'Flávia começa com F.' },
       { t: 'Por muito tempo, pensei que esse F fosse de flores, porque você sempre encontrou um jeito de florescer.' },
       { t: 'Mas, olhando para a sua história, eu sei que ele é de outra coisa.' },
       { t: 'F, de Força.', e: 'nome' }

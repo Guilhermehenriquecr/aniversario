@@ -298,7 +298,7 @@ que eles fizeram.
 
 ## 20. Gratidão
 
-> Eu lembro de você com carinho. Mesmo que o sentimento que eu tinha tenha mudado e virado outra coisa que eu ainda não sei nomear.
+> Eu lembro de você com carinho. O que eu sinto hoje tem outra forma. Mas tudo o que foi bom ficou. Pode ter certeza disso.
 >
 > Eu só queria deixar essas palavras aqui, com carinho.
 >

@@ -874,7 +874,7 @@ function montarFoto() {
   const caixa = el('div', 'cena');
   Particulas.modo('poeira');
 
-  const antes = el('p', 'linha suave', CONFIG.digitar ? '' : 'Depois de um término nosso, tentamos ser amigos.');
+  const antes = el('p', 'linha suave', CONFIG.digitar ? '' : 'Depois de um rompimento nosso, tentamos ser amigos.');
   const cartao = el('div', 'foto-unica');
   const capa = el('button', 'foto-capa');
   capa.type = 'button';
@@ -898,7 +898,7 @@ function montarFoto() {
   dica.classList.remove('on');
 
   const itens = [
-    itemDe(antes, 'Depois de um término nosso, tentamos ser amigos.'),
+    itemDe(antes, 'Depois de um rompimento nosso, tentamos ser amigos.'),
     { el: cartao, espera: 0, pausa: 1500, manual: true, revelar() {
       if (this.revelado) return;
       this.revelado = true;

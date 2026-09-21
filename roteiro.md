@@ -238,7 +238,7 @@ verdadeiro.
 
 *A selfie de vocês, revelada devagar.*
 
-> Depois de um término nosso, tentamos ser amigos.
+> Depois de um rompimento nosso, tentamos ser amigos.
 >
 > *[a foto]*
 >

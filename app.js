@@ -204,7 +204,8 @@ const ROTEIRO = [
       { t: 'Estou distante. Estou vivendo outro momento da minha vida.' },
       { t: 'Passei por mudanças e precisei sair por um tempo de Brasília.' },
       { t: 'Perdi pessoas próximas em uma tragédia e, com tudo isso, aprendi a respeitar o silêncio.' },
-      { t: 'Prefiro continuar em silêncio por enquanto, mas sigo vibrando positivo por você.' },
+      { t: 'Estou contido, em silêncio e vivenciando esse momento. Prefiro permanecer assim.' },
+      { t: 'Mas tenha certeza: sigo vibrando positivo por você.' },
       { t: 'Torço para que a vida te trate com carinho, que seus caminhos se abram e que você continue encontrando paz.', e: 'forte' }
     ]
   },

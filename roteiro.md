@@ -278,7 +278,9 @@ ocasião, me avise que eu reposiciono.
 >
 > Estou distante. Estou vivendo outro momento da minha vida. Passei por mudanças, precisei sair por um tempo de Brasília, perdi pessoas próximas em uma tragédia e, com tudo isso, aprendi a respeitar o silêncio.
 >
-> Prefiro continuar em silêncio por enquanto, mas sigo vibrando positivo por você.
+> Estou contido, em silêncio e vivenciando esse momento. Prefiro permanecer assim.
+>
+> Mas tenha certeza: sigo vibrando positivo por você.
 >
 > Torço para que a vida te trate com carinho, que seus caminhos se abram e que você continue encontrando paz.
 >

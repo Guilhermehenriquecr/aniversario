@@ -65,8 +65,7 @@ const ROTEIRO = [
       { t: '22 de setembro de 1989. Uberlândia, Minas Gerais.' },
       { t: 'No fim da noite daquele dia, o sol cruzou a linha do equador e a primavera começou no Brasil.' },
       { t: 'Foi no mesmo dia em que você chegou ao mundo. A primavera começou junto, como se o calendário tivesse guardado um sinal só seu.' },
-      { t: 'Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e ser feliz.', e: 'forte' },
-      { t: 'Guarda essa ideia. Eu volto nela no fim.', e: 'suave' }
+      { t: 'Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e ser feliz.', e: 'forte' }
     ]
   },
   {
@@ -75,7 +74,12 @@ const ROTEIRO = [
       { t: 'Eu não sei de tudo que você atravessou.' },
       { t: 'Mesmo depois de tantas conversas sobre a vida, eu ainda conheço apenas partes do que você atravessou.' },
       { t: 'Você me contou pedaços. Alguns eu entendi. Outros eu ouvi sem entender, achando que estava entendendo.' },
-      { t: 'Mas tem uma coisa que eu vi com esses olhos, e que eu não esqueço: você nunca parou.' },
+      { t: 'Mas tem uma coisa que eu vi com esses olhos, e que eu não esqueço: você nunca parou.', e: 'forte' }
+    ]
+  },
+  {
+    id: 'forca',
+    linhas: [
       { t: 'Eu não sei o preço que você pagou por cada uma dessas coisas.', e: 'suave' },
       { t: 'E ninguém te deu medalha por nenhuma delas.', e: 'forte' }
     ]
@@ -95,7 +99,7 @@ const ROTEIRO = [
       { t: 'Sete anos depois, você fez de novo.' },
       { t: 'Fábio.' },
       { foto: 'fabio.jpeg', alt: 'Fábio posando em uma estrutura de jogador de futebol americano.' },
-      { t: 'Você já sabia o que era. Já conhecia o preço, já tinha cicatriz. E escolheu outra vez. Amar de novo, confiar de novo, começar de novo.' },
+      { t: 'Você já sabia o que era. Já conhecia a sensação do amor mais profundo e perfeito que existe. Já tinha cicatriz. E escolheu outra vez. Amar de novo, confiar de novo, começar de novo.' },
       { t: 'É por isso que eu digo: você é uma mulher de primaveras.', e: 'forte' }
     ]
   },

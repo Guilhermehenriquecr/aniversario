@@ -82,8 +82,6 @@ palavra: `mostrarVersos: true` no `CONFIG`.
 >
 > Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e ser feliz.
 >
-> Guarda essa ideia. Eu volto nela no fim.
-
 ## 4. A travessia
 
 > Eu não sei de tudo que você atravessou.
@@ -93,7 +91,9 @@ palavra: `mostrarVersos: true` no `CONFIG`.
 > Você me contou pedaços. Alguns eu entendi. Outros eu ouvi sem entender, achando que estava entendendo.
 >
 > Mas tem uma coisa que eu vi com esses olhos, e que eu não esqueço: você nunca parou.
->
+
+## 4.1. De pé, outra vez
+
 > Eu não sei o preço que você pagou por cada uma dessas coisas.
 >
 > E ninguém te deu medalha por nenhuma delas.
@@ -116,7 +116,7 @@ palavra: `mostrarVersos: true` no `CONFIG`.
 >
 > *[foto do Fábio, inteira, revelada após o nome]*
 >
-> Você já sabia o que era. Já conhecia o preço, já tinha cicatriz. E escolheu outra vez. Amar de novo, confiar de novo, começar de novo.
+> Você já sabia o que era. Já conhecia a sensação do amor mais profundo e perfeito que existe. Já tinha cicatriz. E escolheu outra vez. Amar de novo, confiar de novo, começar de novo.
 >
 > É por isso que eu digo: você é uma mulher de primaveras.
 

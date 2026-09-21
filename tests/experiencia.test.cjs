@@ -83,5 +83,7 @@ test('inserir cenas não desloca o jornal nem a foto de Pirenópolis', () => {
   assert.equal(ids[ids.indexOf('recorte')+1], 'assinatura');
   assert.equal(ids[ids.indexOf('assinatura')+1], 'depoisCarnaval');
   assert.equal(ids[ids.indexOf('tatudobem')+1], 'foto');
-  assert.equal(ids[ids.indexOf('foto')+1], 'tentativa');
+  assert.equal(ids[ids.indexOf('foto')+1], 'pirenopolisTentativa');
+  assert.equal(ids[ids.indexOf('pirenopolisTentativa')+1], 'escolhaOutraVez');
+  assert.equal(ids[ids.indexOf('escolhaOutraVez')+1], 'tentativa');
 });

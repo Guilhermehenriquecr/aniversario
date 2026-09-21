@@ -205,10 +205,36 @@ const ROTEIRO = [
     id: 'ensinou',
     linhas: [
       { t: 'Eu não saí dessa história com nada que caiba na mão.' },
-      { t: 'Saí com aprendizado. Aprendi a ser paciente.' },
-      { t: 'Aprendi a entender o tempo das outras pessoas, que quase nunca é o meu.' },
-      { t: 'Aprendi a me posicionar melhor e descobri um poder pessoal dentro de mim que eu nunca tinha visto.' },
-      { t: 'Você me ensinou essas coisas sem perceber. De graça.' },
+      { t: 'Saí com aprendizado.' }
+    ]
+  },
+  {
+    id: 'planoJK',
+    linhas: [
+      { t: 'Diria que você foi o Plano JK na minha vida: amadurecimento de uma vida em seis meses.', e: 'forte' }
+    ]
+  },
+  {
+    id: 'tempoOutro',
+    linhas: [
+      { t: 'Aprendi a entender o tempo das outras pessoas, que quase nunca é o meu.' }
+    ]
+  },
+  {
+    id: 'posicionamento',
+    linhas: [
+      { t: 'Aprendi a me posicionar melhor e descobri um poder pessoal dentro de mim que eu nunca tinha visto.' }
+    ]
+  },
+  {
+    id: 'ensinamento',
+    linhas: [
+      { t: 'Você me ensinou essas coisas sem perceber. De graça.' }
+    ]
+  },
+  {
+    id: 'levar',
+    linhas: [
       { t: 'E eu vou levar isso comigo pelo resto da vida.', e: 'forte' }
     ]
   },
@@ -229,6 +255,19 @@ const ROTEIRO = [
     ]
   },
   {
+    id: 'pirenopolisTentativa',
+    linhas: [
+      { t: 'Mas ser só amigo era muito pouco para tudo o que a gente sentia.', e: 'forte' }
+    ]
+  },
+  {
+    id: 'escolhaOutraVez',
+    linhas: [
+      { t: 'Sem um acordo, sem dizer em voz alta, resolvemos tentar de novo.' },
+      { t: 'No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos um ao outro outra vez.', e: 'suave' }
+    ]
+  },
+  {
     id: 'tentativa',
     linhas: [
       { t: 'E não deu.' },
@@ -244,8 +283,7 @@ const ROTEIRO = [
       { t: 'Lembra do que eu te pedi pra guardar?' },
       { t: 'A primavera não pede licença. Ela não espera o inverno pedir desculpa.' },
       { t: 'O inverno acaba. E ela volta, porque é isso que ela faz.' },
-      { t: 'Você é igual. Não esperou ninguém se redimir pra voltar a florescer. Voltou sozinha, quantas vezes foram necessárias.' },
-      { t: 'E é isso que eu vim te dizer hoje.', e: 'forte' }
+      { t: 'Você é igual. Não esperou ninguém se redimir pra voltar a florescer. Voltou sozinha, quantas vezes foram necessárias.', e: 'forte' }
     ]
   },
   {
@@ -254,16 +292,20 @@ const ROTEIRO = [
       { t: 'Tem uma coisa que preciso te dizer.' },
       { t: 'Estou distante. Estou vivendo outro momento da minha vida.' },
       { t: 'Passei por mudanças e precisei sair por um tempo de Brasília.' },
-      { t: 'Perdi pessoas próximas em uma tragédia e, com tudo isso, aprendi a respeitar o silêncio.' },
-      { t: 'Estou contido, em silêncio e vivenciando esse momento. Prefiro permanecer assim.' },
-      { t: 'Mas tenha certeza: sigo vibrando positivo por você.' },
+      { t: 'Perdi pessoas próximas em uma tragédia e, com tudo isso, aprendi a respeitar o silêncio.' }
+    ]
+  },
+  {
+    id: 'bonsDesejos',
+    linhas: [
+      { t: 'Prefiro continuar em silêncio por enquanto, mas sigo vibrando positivo por você.' },
       { t: 'Torço para que a vida te trate com carinho, que seus caminhos se abram e que você continue encontrando paz.', e: 'forte' }
     ]
   },
   {
     id: 'encontro',
     linhas: [
-      { t: 'Em um dos nossos encontros mais recentes, estavam você, eu e as duas pessoas que você chama de seu sentido.' },
+      { t: 'No nosso último encontro, estavam você, eu e as duas pessoas que você chama de seu sentido.' },
       { t: 'Por dois dias, eu estive perto do que você tem de mais precioso. Me senti parte de uma família.' },
       { t: 'Foi uma lembrança bonita. Eu guardo com carinho a confiança que você colocou naquele momento.', e: 'forte' }
     ]
@@ -844,15 +886,9 @@ function montarFoto() {
   cartao.appendChild(img);
 
   const depois = el('p', 'linha', CONFIG.digitar ? '' : 'Pirenópolis. Alguns dias rindo, andando e conversando, como se a amizade pudesse ser suficiente.');
-  const sentimento = el('p', 'linha forte', CONFIG.digitar ? '' : 'Mas ser só amigo era muito pouco para tudo o que a gente sentia.');
-  const tentativa = el('p', 'linha suave', CONFIG.digitar ? '' : 'Sem um acordo, sem dizer em voz alta, resolvemos tentar de novo. No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos um ao outro outra vez.');
-
-
   caixa.appendChild(antes);
   caixa.appendChild(cartao);
   caixa.appendChild(depois);
-  caixa.appendChild(sentimento);
-  caixa.appendChild(tentativa);
 
   palco.replaceChildren(caixa);
   dica.classList.remove('on');
@@ -867,9 +903,7 @@ function montarFoto() {
       capa.setAttribute('aria-label', 'Foto de Pirenópolis revelada');
       setTimeout(() => { if (cena && !cena.completo) revelarProximo(); }, this.pausa);
     } },
-    itemDe(depois, 'Pirenópolis. Alguns dias rindo, andando e conversando, como se a amizade pudesse ser suficiente.'),
-    itemDe(sentimento, 'Mas ser só amigo era muito pouco para tudo o que a gente sentia.'),
-    itemDe(tentativa, 'Sem um acordo, sem dizer em voz alta, resolvemos tentar de novo. No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos um ao outro outra vez.', 1000)
+    itemDe(depois, 'Pirenópolis. Alguns dias rindo, andando e conversando, como se a amizade pudesse ser suficiente.')
   ];
   itens[1].revelar = itens[1].revelar.bind(itens[1]);
   capa.addEventListener('click', (ev) => { ev.stopPropagation(); itens[1].revelar(); });

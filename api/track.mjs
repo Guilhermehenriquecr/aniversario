@@ -7,6 +7,10 @@ function device(ua = '') {
   return 'Computador';
 }
 
+function headerValue(value) {
+  try { return decodeURIComponent(value || ''); } catch { return value || ''; }
+}
+
 export async function POST(req) {
   if (!redisConfigured()) return json({ ok: false, setup: true });
   const input = await body(req);
@@ -21,9 +25,9 @@ export async function POST(req) {
     slide: Number.isFinite(Number(input.slide)) ? Number(input.slide) : null,
     totalSlides: Number.isFinite(Number(input.totalSlides)) ? Number(input.totalSlides) : null,
     at: new Date().toISOString(),
-    city: req.headers.get('x-vercel-ip-city') || 'Desconhecida',
-    region: req.headers.get('x-vercel-ip-country-region') || '',
-    country: req.headers.get('x-vercel-ip-country') || '',
+    city: headerValue(req.headers.get('x-vercel-ip-city')) || 'Desconhecida',
+    region: headerValue(req.headers.get('x-vercel-ip-country-region')),
+    country: headerValue(req.headers.get('x-vercel-ip-country')),
     device: device(ua),
     userAgent: ua.slice(0, 240),
     ipHash,

@@ -130,3 +130,13 @@ navegador) não destrói o presente por engano.
 Se você quiser o contador de verdade no servidor, dá para adicionar um Redis
 na Vercel e contar as leituras por link em vez de por aparelho. É meia hora de
 trabalho e a estrutura já está pronta para isso.
+# Painel privado
+
+O painel fica em `/admin.html`. Para ativar o rastreamento persistente no Vercel,
+adicione `KV_REST_API_URL` e `KV_REST_API_TOKEN` de uma integração Upstash Redis.
+O login padrão é `guilherme` / `bregadeira`; defina `ADMIN_USER`, `ADMIN_PASSWORD`
+e `ADMIN_SECRET` nas variáveis do projeto para substituir os valores padrão.
+
+O painel registra abertura, sessão, slide alcançado, conclusão, aparelho e
+localidade aproximada fornecida pelos cabeçalhos do Vercel. O botão **Zerar
+contadores** remove todos os eventos armazenados.

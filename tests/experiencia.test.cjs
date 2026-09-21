@@ -66,7 +66,8 @@ test('inserir cenas não desloca o jornal nem a foto de Pirenópolis', () => {
   vm.runInContext(source.slice(start, source.indexOf('let cena =', start)), context);
   const ids = vm.runInContext('CAPITULOS.map(c => c.tipo === "texto" ? ROTEIRO[c.i].id : c.tipo)', context);
   assert.equal(ids[ids.indexOf('fevereiro')+1], 'recorte');
-  assert.equal(ids[ids.indexOf('recorte')+1], 'depoisCarnaval');
+  assert.equal(ids[ids.indexOf('recorte')+1], 'assinatura');
+  assert.equal(ids[ids.indexOf('assinatura')+1], 'depoisCarnaval');
   assert.equal(ids[ids.indexOf('tatudobem')+1], 'foto');
   assert.equal(ids[ids.indexOf('foto')+1], 'tentativa');
 });

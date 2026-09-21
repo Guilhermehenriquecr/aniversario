@@ -19,6 +19,22 @@ const CONFIG = {
   volumeDigitacao: 0.2              // de 0 a 1
 };
 
+/* ---------- acompanhamento privado ---------- */
+const RASTREAMENTO = (() => {
+  if (typeof window === 'undefined' || typeof fetch !== 'function') return { enviar() {} };
+  let sessionId = '';
+  try {
+    sessionId = sessionStorage.getItem('aniver:session') || crypto.randomUUID();
+    sessionStorage.setItem('aniver:session', sessionId);
+  } catch { sessionId = `${Date.now()}-${Math.random().toString(36).slice(2)}`; }
+  const enviar = (type, extra = {}) => {
+    const payload = { type, sessionId, width: innerWidth, height: innerHeight, ...extra };
+    fetch('/api/track', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload), keepalive: true }).catch(() => {});
+  };
+  enviar('opened');
+  return { enviar };
+})();
+
 /* ---------- O ROTEIRO ---------- */
 
 const ROTEIRO = [
@@ -305,10 +321,12 @@ const brilho = document.getElementById('brilho');
 const CAPITULOS = [
   ...ROTEIRO.flatMap((dados, i) => [
     { tipo: 'texto', i },
-    ...(dados.id === 'fevereiro' ? [{ tipo: 'recorte' }] : []),
+    ...(dados.id === 'fevereiro' ? [
+      { tipo: 'recorte' },
+      ...(CONFIG.mostrarAssinaturaDoTexto ? [{ tipo: 'assinatura' }] : [])
+    ] : []),
     ...(dados.id === 'tatudobem' ? [{ tipo: 'foto' }] : [])
   ]),
-  ...(CONFIG.mostrarAssinaturaDoTexto ? [{ tipo: 'assinatura' }] : []),
   ...(CONFIG.mostrarVersos ? [{ tipo: 'versos' }] : []),
   { tipo: 'video' },
   { tipo: 'felicitacoes' },
@@ -994,6 +1012,7 @@ function montar(n) {
   capitulo = n;
   const cap = CAPITULOS[n];
   if (!cap) return;
+  RASTREAMENTO.enviar('slide', { slide: n + 1, totalSlides: CAPITULOS.length });
   Interface.cena(cap.tipo === 'texto' ? ROTEIRO[cap.i].id : cap.tipo, n, CAPITULOS.length);
   palco.scrollTop = 0;
   if (cap.tipo === 'texto') montarTexto(cap.i);
@@ -1036,6 +1055,7 @@ function destruir() {
   dica.classList.remove('on');
 
   cena.el.classList.add('queima');
+  RASTREAMENTO.enviar('completed', { slide: capitulo + 1, totalSlides: CAPITULOS.length });
   Particulas.rajada(90);
   setTimeout(() => brilho.classList.add('on'), 1100);
 

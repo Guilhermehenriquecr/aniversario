@@ -147,7 +147,7 @@ const ROTEIRO = [
       { t: 'Você tinha um nome só seu pra me chamar.' },
       { t: '🧩', e: 'emoji' },
       { t: 'Autistinha.', e: 'apelido' },
-      { t: 'Às vezes eu ainda escuto, do nada. É estranho como uma pessoa inventa um jeito de te chamar e depois vai embora levando o barulho dela.', e: 'forte' }
+      { t: 'Às vezes eu ainda escuto esse nome, do nada. É estranho como um jeito de chamar alguém pode continuar vivo, mesmo quando a vida segue por caminhos diferentes.', e: 'forte' }
     ]
   },
   {

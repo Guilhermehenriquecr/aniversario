@@ -194,7 +194,7 @@ O recorte é tipografia de verdade, não imagem. Explico no README por quê.
 
 > Você me chamava de um jeito que era só seu. Ninguém nunca me chamou assim.
 >
-> Às vezes eu ainda escuto, do nada, quando não estou esperando.
+> Às vezes eu ainda escuto esse nome, do nada. É estranho como um jeito de chamar alguém pode continuar vivo, mesmo quando a vida segue por caminhos diferentes.
 >
 > É estranho como uma pessoa inventa um jeito de te chamar e depois vai embora levando o barulho dela.
 

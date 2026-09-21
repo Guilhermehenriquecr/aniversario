@@ -306,9 +306,9 @@ que eles fizeram.
 
 ## 20. Gratidão
 
-> Eu lembro de você com carinho. O que eu sinto hoje tem outra forma. Mas tudo o que foi bom ficou. Pode ter certeza disso.
+> Eu lembro de você com admiração. O que eu sinto hoje tem outra forma. Mas tudo o que foi bom ficou. Pode ter certeza disso.
 >
-> Eu só queria deixar essas palavras aqui, com carinho.
+> Eu só queria deixar essas palavras aqui, com bastante sobriedade e maturidade sobre a nossa história.
 >
 > Eu oro por você, pela sua família, pelos seus filhos. Oro pra que onde você estiver, você esteja bem.
 >

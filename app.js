@@ -313,9 +313,9 @@ const ROTEIRO = [
   {
     id: 'gratidao',
     linhas: [
-      { t: 'Eu lembro de você com carinho.' },
+      { t: 'Eu lembro de você com admiração.' },
       { t: 'O que eu sinto hoje tem outra forma. Mas tudo o que foi bom ficou. Pode ter certeza disso.' },
-      { t: 'Eu só queria deixar essas palavras aqui, com carinho.' },
+      { t: 'Eu só queria deixar essas palavras aqui, com bastante sobriedade e maturidade sobre a nossa história.' },
       { t: 'Eu oro por você, pela sua família, pelos seus filhos. Oro pra que onde você estiver, você esteja bem.', e: 'forte' },
       { t: 'Eu sei que você vai estar. Você sempre esteve.', e: 'forte' }
     ]

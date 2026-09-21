@@ -305,7 +305,7 @@ const ROTEIRO = [
     linhas: [
       { t: 'Tem uma coisa que preciso te dizer.' },
       { t: 'Estou distante. Estou vivendo outro momento da minha vida.' },
-      { t: 'Passei por mudanças e precisei sair por um tempo de Brasília.' },
+      { t: 'Passei por mudanças e precisei sair por um tempo pelo mundo.' },
       { t: 'Perdi pessoas próximas em uma tragédia e, com tudo isso, aprendi a respeitar o silêncio.' }
     ]
   },

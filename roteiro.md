@@ -276,7 +276,7 @@ ocasião, me avise que eu reposiciono.
 
 > Tem uma coisa que preciso te dizer.
 >
-> Estou distante. Estou vivendo outro momento da minha vida. Passei por mudanças, perdi pessoas e aprendi a respeitar o silêncio.
+> Estou distante. Estou vivendo outro momento da minha vida. Passei por mudanças, precisei sair por um tempo de Brasília, perdi pessoas próximas em uma tragédia e, com tudo isso, aprendi a respeitar o silêncio.
 >
 > Prefiro continuar em silêncio por enquanto, mas sigo vibrando positivo por você.
 >

@@ -74,7 +74,7 @@ const ROTEIRO = [
       { t: 'Eu não sei de tudo que você atravessou.' },
       { t: 'Mesmo depois de tantas conversas sobre a vida, eu ainda conheço apenas partes do que você atravessou.' },
       { t: 'Você me contou pedaços. Alguns eu entendi. Outros eu ouvi sem entender, achando que estava entendendo.' },
-      { t: 'Mas tem uma coisa que eu vi com esses olhos, e que eu não esqueço: você nunca parou.', e: 'forte' }
+      { t: 'Mas tem uma coisa que eu vi com meus olhos, e que eu não esqueço: você nunca parou.', e: 'forte' }
     ]
   },
   {

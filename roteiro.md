@@ -90,7 +90,7 @@ palavra: `mostrarVersos: true` no `CONFIG`.
 >
 > Você me contou pedaços. Alguns eu entendi. Outros eu ouvi sem entender, achando que estava entendendo.
 >
-> Mas tem uma coisa que eu vi com esses olhos, e que eu não esqueço: você nunca parou.
+> Mas tem uma coisa que eu vi com meus olhos, e que eu não esqueço: você nunca parou.
 
 ## 4.1. De pé, outra vez
 

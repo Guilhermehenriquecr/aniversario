@@ -169,3 +169,7 @@ progress{margin-top:10px;height:1px}
 }
 @media(max-height:560px){.capa{padding-top:85px;padding-bottom:32px}.capa-rodape{margin-top:24px}.palco{inset:90px 0 92px;padding-top:10px}.capitulo-barra{top:65px}.leitura-rodape{bottom:calc(8px + env(safe-area-inset-bottom))}.cena{gap:13px}}
 @media(prefers-reduced-motion:reduce){.capa::before,.capa::after{animation:none}.linha{transition:none}.foto-unica,.recorte{transition:none}}
+.capitulo-barra{display:none!important}
+.palco{top:96px}
+@media(max-width:700px){.palco{top:78px}}
+@media(max-height:560px){.palco{top:65px}}

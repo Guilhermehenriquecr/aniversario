@@ -94,6 +94,12 @@ const ROTEIRO = [
     ]
   },
   {
+    id: 'maeLeoa',
+    linhas: [
+      { t: 'E hoje é uma excelente mãe, como eu dizia: uma mãe leoa.', e: 'forte' }
+    ]
+  },
+  {
     id: 'fabio',
     linhas: [
       { t: 'Sete anos depois, você fez de novo.' },

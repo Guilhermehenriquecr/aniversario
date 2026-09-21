@@ -284,15 +284,6 @@ const ROTEIRO = [
     ]
   },
   {
-    id: 'primavera',
-    linhas: [
-      { t: 'Lembra do que eu te pedi pra guardar?' },
-      { t: 'A primavera não pede licença. Ela não espera o inverno pedir desculpa.' },
-      { t: 'O inverno acaba. E ela volta, porque é isso que ela faz.' },
-      { t: 'Você é igual. Não esperou ninguém se redimir pra voltar a florescer. Voltou sozinha, quantas vezes foram necessárias.', e: 'forte' }
-    ]
-  },
-  {
     id: 'distancia',
     linhas: [
       { t: 'Tem uma coisa que preciso te dizer.' },

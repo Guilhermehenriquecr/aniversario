@@ -266,13 +266,6 @@ ocasião, me avise que eu reposiciono.
 >
 > Infelizmente, não teve a briga de faca que a gente planejou. Essa é a única parte com que eu realmente não me conformei. Kkk.
 
-## 17. A primavera volta
-
-> Lembra do que eu te pedi pra guardar?
->
-> A primavera não pede licença. Ela não espera o inverno pedir desculpa. O inverno acaba. E ela volta, porque é isso que ela faz.
->
-> Você é igual. Não esperou ninguém se redimir pra voltar a florescer. Voltou sozinha, quantas vezes foram necessárias.
 >
 > E é isso que eu vim te dizer hoje.
 

@@ -107,7 +107,8 @@ body:has(#capa:not([hidden])){overflow-y:auto}
 .trilha-intro{background:radial-gradient(ellipse at center,#7b56301b,transparent 55%),#170f13}
 .trilha-cartao{background:#26191dcc;border-color:#c9a97849;box-shadow:0 32px 100px #0004}
 .trilha-cartao p:not(.sobretitulo){color:var(--tinta-fraca)}
-.capitulo-barra{top:clamp(82px,11vh,106px);width:min(620px,calc(100% - 48px));padding-bottom:12px;color:#d2ae7fc9;border-color:#d2ae7f32;font-size:9px;letter-spacing:.16em}
+.capitulo-barra{top:clamp(82px,11vh,106px);width:min(620px,calc(100% - 48px));padding-bottom:12px;color:#d2ae7fc9;border-color:#d2ae7f32;font-size:9px;letter-spacing:.16em;justify-content:flex-start}
+#capitulo-numero{display:none}
 .palco{inset:clamp(124px,17vh,150px) 0 130px;padding:18px 24px 36px}
 .cena{max-width:640px;gap:clamp(17px,2.5vh,24px)}
 .linha{max-width:39ch;font-size:clamp(24px,2.2vw,31px);line-height:1.42;letter-spacing:.002em;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.2,1)}

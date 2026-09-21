@@ -1028,13 +1028,16 @@ function montarFim() {
   Particulas.modo('poeira');
 
   const l1 = el('p', 'linha nome', CONFIG.digitar ? '' : 'Feliz aniversário, Flávia.');
+  const l2 = el('p', 'linha suave', CONFIG.digitar ? '' : 'Que a vida seja justa. E, se não for nesta, que em outra a gente se encontre mais uma vez.');
   caixa.appendChild(l1);
+  caixa.appendChild(l2);
 
   palco.replaceChildren(caixa);
   dica.classList.remove('on');
 
   const itens = [
-    itemDe(l1, 'Feliz aniversário, Flávia.', 2000)
+    itemDe(l1, 'Feliz aniversário, Flávia.', 1500),
+    itemDe(l2, 'Que a vida seja justa. E, se não for nesta, que em outra a gente se encontre mais uma vez.', 2000)
   ];
   if (CONFIG.digitar) reservarAltura(itens);
 

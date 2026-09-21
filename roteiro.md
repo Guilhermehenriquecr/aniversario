@@ -356,6 +356,8 @@ segunda chance. Se tocar de novo, avança.*
 ## 25. O fim
 
 > **Feliz aniversário, Flávia.**
+>
+> Que a vida seja justa. E, se não for nesta, que em outra a gente se encontre mais uma vez.
 
 Um toque e o texto queima: as letras se desfazem, uma explosão de partículas
 douradas, a tela apaga. Aí aparecem as leituras que restam, e o que fica é uma

@@ -117,6 +117,10 @@ body:has(#capa:not([hidden])){overflow-y:auto}
 .linha.aviso{background:#c9a9780b;border-color:#c9a97830;padding:17px 22px}
 .leitura-rodape{bottom:max(24px,env(safe-area-inset-bottom));width:min(620px,calc(100% - 48px));padding:20px 0 0;gap:24px;align-items:center;background:none}
 .leitura-rodape::before{content:'';position:absolute;z-index:-1;inset:-30px -24px -20px;background:linear-gradient(0deg,#170f13 32%,#170f13f0 60%,#170f1300);pointer-events:none}
+.leitura-rodape{display:grid;grid-template-columns:auto minmax(0,1fr) auto}
+.voltar{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 0;border:0;background:transparent;color:#d5c5b8a8;font:400 10px var(--sans);letter-spacing:.08em;cursor:pointer;transition:color .2s ease,transform .2s ease}
+.voltar:hover{color:var(--ouro-claro);transform:translateX(-2px)}
+.voltar span:first-child{font:300 22px/1 var(--serif)}
 .andamento{color:#d5c5b8b8;font-size:10px;letter-spacing:.02em}
 progress{margin-top:10px;height:1px}
 #continuar{min-width:154px;min-height:52px;border-radius:2px;background:#dfc59e;border-color:#dfc59e;color:#24171b;font-size:11px;letter-spacing:.06em}
@@ -153,6 +157,8 @@ progress{margin-top:10px;height:1px}
  .linha.suave{font-size:clamp(19px,5.3vw,22px);line-height:1.46}
  .linha.aviso{font-size:17px;padding:13px 16px}
  .leitura-rodape{bottom:calc(17px + env(safe-area-inset-bottom));width:86%;gap:14px;padding-top:14px}
+ .voltar{width:32px;min-height:48px;padding:0;justify-content:flex-start;font-size:0}
+ .voltar-texto{display:none}
  .andamento{font-size:9px;line-height:1.35}
  #continuar{min-width:124px;min-height:48px;padding:11px 15px;font-size:10px}
  .foto-unica{width:min(70vw,280px);min-height:min(70vw,280px)}

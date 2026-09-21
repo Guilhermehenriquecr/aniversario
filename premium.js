@@ -1,6 +1,7 @@
 /* Interface da carta: os controles respeitam o término de cada cena. */
 const Interface = (() => {
   const bouton = document.getElementById('continuar');
+  const voltar = document.getElementById('voltar');
   const statut = document.getElementById('leitura-status');
   const titres = {
     abertura:'Antes de começar', nome:'A sua luz', dia:'A primavera', travessia:'A sua força',
@@ -20,6 +21,8 @@ const Interface = (() => {
     document.getElementById('progresso').value = indice / total * 100;
     bouton.hidden = false;
     bouton.disabled = true;
+    voltar.hidden = indice === 0;
+    voltar.disabled = indice === 0;
     bouton.textContent = 'Leia com calma';
     statut.textContent = 'Uma história, no seu tempo.';
   }
@@ -36,6 +39,8 @@ const Interface = (() => {
     document.getElementById('capitulo-numero').textContent = '22 / 09';
     document.getElementById('progresso').value = 100;
     bouton.hidden = true;
+    voltar.hidden = false;
+    voltar.disabled = false;
     statut.textContent = 'A primavera permanece.';
   }
   document.getElementById('tamanho-texto').addEventListener('click', e => {

@@ -23,6 +23,20 @@ test('toques não saltam texto nem encerram uma cena que ainda revela a assinatu
   assert.equal(context.end, 1);
 });
 
+test('o controle de voltar retorna apenas um slide e nunca avança a leitura', () => {
+  const fn = source.slice(source.indexOf('function anterior()'), source.indexOf('function avancar()'));
+  const context = vm.createContext({ ocupado:false, capitulo:4, dica:{classList:{remove(){}}}, cena:{el:{classList:{add(){}}}}, setTimeout(fn){fn();}, destino:null,
+    montar(indice){context.destino=indice;} });
+  vm.runInContext(fn, context);
+  vm.runInContext('anterior()', context);
+  assert.equal(context.destino, 3);
+  context.capitulo=0;
+  context.destino=null;
+  vm.runInContext('anterior()', context);
+  assert.equal(context.destino, null);
+  assert.match(source, /getElementById\('voltar'\)\.addEventListener\('click', anterior\)/);
+});
+
 test('músicas tocam na ordem, pausa não reinicia, volume e redução para vídeo funcionam', () => {
   const nodes = new Map();
   function element() {

@@ -1035,6 +1035,15 @@ function proximo() {
   setTimeout(() => { ocupado = false; montar(capitulo + 1); }, 880);
 }
 
+function anterior() {
+  if (ocupado || capitulo <= 0) return;
+  ocupado = true;
+  dica.classList.remove('on');
+  if (cena && cena.limpar) cena.limpar();
+  if (cena) cena.el.classList.add('sai');
+  setTimeout(() => { ocupado = false; montar(capitulo - 1); }, 520);
+}
+
 function avancar() {
   if (ocupado || !cena) return;
 
@@ -1067,6 +1076,7 @@ function destruir() {
 }
 
 document.getElementById('continuar').addEventListener('click', avancar);
+document.getElementById('voltar').addEventListener('click', anterior);
 document.addEventListener('keydown', (e) => {
   if (e.target.closest('button, input, a, video') || e.repeat || e.altKey || e.ctrlKey || e.metaKey) return;
   if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight') {

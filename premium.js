@@ -43,7 +43,8 @@ const Interface = (() => {
     voltar.disabled = false;
     statut.textContent = 'A primavera permanece.';
   }
-  document.getElementById('tamanho-texto').addEventListener('click', e => {
+  const controleTexto = document.getElementById('tamanho-texto');
+  if (controleTexto) controleTexto.addEventListener('click', e => {
     const grande = document.body.classList.toggle('texto-grande');
     e.currentTarget.setAttribute('aria-pressed', String(grande));
     e.currentTarget.setAttribute('aria-label', grande ? 'Usar texto padrão' : 'Aumentar texto');

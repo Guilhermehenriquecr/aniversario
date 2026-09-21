@@ -271,6 +271,13 @@ const ROTEIRO = [
     ]
   },
   {
+    id: 'intercessao',
+    linhas: [
+      { foto: 'são miguel.jpg', classe: 'retrato-intercessao', alt: 'Imagem de São Miguel Arcanjo.' },
+      { t: 'Fizemos um propósito de 30 dias em intercessão pelo nosso vínculo. Sim, nós fizemos de tudo.', e: 'forte' }
+    ]
+  },
+  {
     id: 'pirenopolisTentativa',
     linhas: [
       { t: 'Mas ser só amigo era muito pouco para tudo o que a gente sentia.', e: 'forte' }
@@ -591,7 +598,7 @@ function montarTexto(i) {
       capa.setAttribute('aria-label', 'Revelar a foto do Fábio');
       capa.appendChild(el('span', 'foto-icone', '✦'));
       capa.appendChild(el('span', null, 'Toque para revelar'));
-      const foto = el('img', 'midia retrato-fabio');
+      const foto = el('img', 'midia ' + (l.classe || 'retrato-fabio'));
       foto.src = l.foto;
       foto.alt = l.alt;
       foto.width = 900;
@@ -604,7 +611,7 @@ function montarTexto(i) {
         item.revelado = true;
         cartao.classList.add('aberto');
         foto.classList.add('vis');
-        capa.setAttribute('aria-label', 'Foto do Fábio revelada');
+      capa.setAttribute('aria-label', 'Imagem revelada');
         setTimeout(() => { if (cena && !cena.completo) revelarProximo(); }, item.pausa);
       }};
       capa.addEventListener('click', (ev) => { ev.stopPropagation(); item.revelar(); });

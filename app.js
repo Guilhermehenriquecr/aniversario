@@ -141,17 +141,54 @@ const ROTEIRO = [
     confete: true,
     linhas: [
       { t: 'Sábado, 7 de fevereiro de 2026. Folia Goiás, Avenida 85, Goiânia.' },
-      { t: 'Trezentas e cinquenta mil pessoas na rua. E dentre trezentas e cinquenta mil, Deus nos colocou à frente.', e: 'forte' },
-      { t: 'Era uma das datas que eu mais amo no ano. Eu não sabia ainda que ela ia me trazer um propósito.' }
+      { t: 'Trezentas e cinquenta mil pessoas na rua.', e: 'forte' }
+    ]
+  },
+  {
+    id: 'encontroFolia',
+    linhas: [
+      { t: 'E dentre trezentas e cinquenta mil, Deus nos colocou à frente.', e: 'forte' }
+    ]
+  },
+  {
+    id: 'futuroFolia',
+    linhas: [
+      { t: 'Era uma das datas que eu mais amo no ano. Eu ainda não sabia que, a partir daquele momento, viveria grandes momentos.', e: 'suave' }
     ]
   },
   {
     id: 'depoisCarnaval',
     linhas: [
-      { t: 'O que era pra ser um simples beijo se tornou dias seguidos de conversas, do bom-dia ao boa-noite.' },
-      { t: 'O tempo foi passando, começamos a dividir nossa rotina e, quando percebemos, éramos parte um do outro.' },
-      { t: 'Nossas rotinas se cruzaram: você na correria da loja, lidando com diferentes tipos de pessoas. Resolvendo problemas da sua casa, carregando a responsabilidade de mãe.' },
-      { t: 'Eu lidando com os mais variados números, meus projetos, meu mestrado e todas as minhas responsabilidades.' },
+      { t: 'O que era pra ser um simples beijo se tornou dias seguidos de conversas, do bom-dia ao boa-noite.' }
+    ]
+  },
+  {
+    id: 'rotinaJuntos',
+    linhas: [
+      { t: 'O tempo foi passando, começamos a dividir nossa rotina e, quando percebemos, éramos parte um do outro.' }
+    ]
+  },
+  {
+    id: 'rotinaDela',
+    linhas: [
+      { t: 'Nossas rotinas se cruzaram: você na correria da loja, lidando com diferentes tipos de pessoas.' }
+    ]
+  },
+  {
+    id: 'responsabilidade',
+    linhas: [
+      { t: 'Resolvendo problemas da sua casa, carregando a responsabilidade de mãe.' }
+    ]
+  },
+  {
+    id: 'rotinaMinha',
+    linhas: [
+      { t: 'Eu lidando com os mais variados números, meus projetos, meu mestrado e todas as minhas responsabilidades.' }
+    ]
+  },
+  {
+    id: 'sintonia',
+    linhas: [
       { t: 'E, mesmo assim, nossa sintonia continuava sólida.', e: 'forte' }
     ]
   },
@@ -338,7 +375,7 @@ const brilho = document.getElementById('brilho');
 const CAPITULOS = [
   ...ROTEIRO.flatMap((dados, i) => [
     { tipo: 'texto', i },
-    ...(dados.id === 'fevereiro' ? [
+    ...(dados.id === 'futuroFolia' ? [
       { tipo: 'recorte' },
       ...(CONFIG.mostrarAssinaturaDoTexto ? [{ tipo: 'assinatura' }] : [])
     ] : []),
@@ -574,11 +611,14 @@ function montarAssinatura() {
   const bloco = el('div', 'texto');
   caixa.appendChild(bloco);
 
+  const iniciais = [];
   const palavras = TEXTO_DO_SMS.map((p) => {
     const s = el('span', 'palavra');
     const inicio = p.search(/[A-Za-zÀ-ÿ]/);
     if (inicio >= 0) {
-      s.appendChild(el('span', 'letra-assinatura', p[inicio]));
+      const inicial = el('span', 'letra-assinatura', p[inicio]);
+      iniciais.push(inicial);
+      s.appendChild(inicial);
       s.appendChild(document.createTextNode(p.slice(inicio + 1)));
     } else s.textContent = p;
     bloco.appendChild(s);
@@ -604,21 +644,36 @@ function montarAssinatura() {
     interrompido = true;
     palavras.forEach((p) => { p.classList.add('vis'); p.classList.add('acesa'); p.querySelector('.letra-assinatura')?.classList.add('acesa'); });
 
-    const anuncio = el('p', 'linha forte assinatura-anuncio', 'Antes que fiquem dúvidas, sou eu:');
-    caixa.appendChild(anuncio);
-    setTimeout(() => anuncio.classList.add('vis'), 360);
+    const pista = el('p', 'linha suave assinatura-anuncio', 'Algumas respostas já estavam ali desde a primeira letra.');
+    caixa.appendChild(pista);
+    setTimeout(() => pista.classList.add('vis'), 360);
 
-    const nome = el('div', 'assinatura', 'GUILHERME HENRIQUE');
+    const nome = el('div', 'assinatura assinatura-formacao');
+    const letrasDoNome = [];
+    ['GUILHERME', 'HENRIQUE'].forEach((parte, indice) => {
+      const grupo = el('span', 'grupo-assinatura');
+      [...parte].forEach((letra) => {
+        const destino = el('span', 'letra-formada', letra);
+        grupo.appendChild(destino);
+        letrasDoNome.push(destino);
+      });
+      nome.appendChild(grupo);
+      if (indice === 0) nome.appendChild(document.createTextNode(' '));
+    });
     caixa.appendChild(nome);
-    setTimeout(() => nome.classList.add('vis'), 420);
+    setTimeout(() => {
+      nome.classList.add('vis');
+      iniciais.forEach((letra) => letra.classList.add('entregue'));
+      letrasDoNome.forEach((letra, i) => setTimeout(() => letra.classList.add('formada'), 100 * i));
+    }, 720);
 
-    const fim = el('p', 'linha forte', 'Nem toda assinatura vem no fim.');
+    const fim = el('p', 'linha forte assinatura-fecho', 'As iniciais guardavam um nome.');
     caixa.appendChild(fim);
     manterVisivel(fim);
     setTimeout(() => {
       fim.classList.add('vis');
       setTimeout(mostrarDica, 900);
-    }, 2100);
+    }, 2700);
   };
 
   const acender = () => {

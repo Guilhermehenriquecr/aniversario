@@ -63,8 +63,12 @@ body:has(#capa:not([hidden])){overflow-y:auto}
 .palavra-leitura{animation:none}
 .linha{text-wrap:balance}
 .letra-assinatura{display:inline-block;color:var(--ouro);font-weight:500;transition:color .6s ease,text-shadow .6s ease,transform .6s ease}.letra-assinatura.acesa{color:#fffdf6;text-shadow:0 0 22px rgba(224,189,125,.95);transform:translateY(-1px)}
+.letra-assinatura.entregue{color:#c9a97855;text-shadow:none;transform:scale(.88)}
 .palavra.acesa{color:inherit;text-shadow:none}
 .assinatura-anuncio{margin-top:18px!important;font-size:clamp(17px,1.8vw,23px)!important;letter-spacing:.03em}
+.assinatura-formacao{display:flex;justify-content:center;align-items:center;gap:.18em;flex-wrap:wrap;margin-top:8px;min-height:1.5em}
+.grupo-assinatura{display:inline-flex}.letra-formada{display:inline-block;opacity:0;color:var(--ouro);transform:translateY(18px) scale(.75);filter:blur(5px);transition:opacity .45s ease,transform .6s cubic-bezier(.2,.85,.2,1),filter .45s ease,text-shadow .6s ease}.letra-formada.formada{opacity:1;transform:none;filter:none;color:#fff5e5;text-shadow:0 0 24px rgba(224,189,125,.75)}
+.assinatura-fecho{margin-top:8px!important;font-size:clamp(17px,1.8vw,23px)!important}
 .leitura-rodape{background:transparent}
 @media(max-width:700px){
  .moldura{inset:10px}.cabecalho{top:max(23px,env(safe-area-inset-top));left:7%;right:7%}.edicao{font-size:8px;letter-spacing:.16em}.marca{font-size:22px}

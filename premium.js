@@ -9,7 +9,7 @@ const Interface = (() => {
     entrada:'A nossa história', fevereiro:'Onde tudo começou', encontroFolia:'O encontro', futuroFolia:'O que veio depois', recorte:'Uma noite para lembrar', depoisCarnaval:'Do bom-dia ao boa-noite', rotinaJuntos:'Parte um do outro', rotinaDela:'A sua rotina', responsabilidade:'A sua força', rotinaMinha:'A minha rotina', sintonia:'A nossa sintonia',
     apelido:'Um jeito só seu', ensinou:'O que ficou', planoJK:'Em seis meses', tempoOutro:'O tempo do outro', posicionamento:'O que descobri', ensinamento:'De graça', levar:'Para sempre', parteruim:'Nós dois', tatudobem:'E tá tudo bem',
     foto:'Pirenópolis', pirenopolisTentativa:'Muito pouco', escolhaOutraVez:'Uma escolha outra vez', tentativa:'Valeu a pena', primavera:'A primavera volta', distancia:'Com calma', bonsDesejos:'Com carinho',
-    encontro:'Parte de uma família', gratidao:'Com carinho', fdeforca:'F, de força',
+    encontro:'Parte de uma família', gratidao:'Com admiração', oracao:'Para você', fdeforca:'F, de força',
     assinatura:'Entre as palavras', versos:'O seu nome', video:'Sete segundos', felicitacoes:'Com os melhores desejos', fim:'Para você'
   };
   function cena(id, indice, total) {

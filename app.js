@@ -312,7 +312,12 @@ const ROTEIRO = [
     linhas: [
       { t: 'Eu lembro de você com admiração.' },
       { t: 'O que eu sinto hoje tem outra forma. Mas tudo o que foi bom ficou. Pode ter certeza disso.' },
-      { t: 'Eu só queria deixar essas palavras aqui, com bastante sobriedade e maturidade sobre a nossa história.' },
+      { t: 'Eu só queria deixar essas palavras aqui, com bastante sobriedade e maturidade sobre a nossa história.' }
+    ]
+  },
+  {
+    id: 'oracao',
+    linhas: [
       { t: 'Eu oro por você, pela sua família, pelos seus filhos. Oro pra que onde você estiver, você esteja bem.', e: 'forte' },
       { t: 'Eu sei que você vai estar. Você sempre fica. Você é uma boa pessoa, eu sei disso.', e: 'forte' }
     ]

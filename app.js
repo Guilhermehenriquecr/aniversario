@@ -64,7 +64,12 @@ const ROTEIRO = [
     linhas: [
       { t: '22 de setembro de 1989. Uberlândia, Minas Gerais.' },
       { t: 'No fim da noite daquele dia, o sol cruzou a linha do equador e a primavera começou no Brasil.' },
-      { t: 'Foi no mesmo dia em que você chegou ao mundo. A primavera começou junto, como se o calendário tivesse guardado um sinal só seu.' },
+      { t: 'Foi no mesmo dia em que você chegou ao mundo. A primavera começou junto, como se o calendário tivesse guardado um sinal só seu.' }
+    ]
+  },
+  {
+    id: 'proposito',
+    linhas: [
       { t: 'Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e seguir em frente.', e: 'forte' }
     ]
   },
@@ -73,8 +78,13 @@ const ROTEIRO = [
     linhas: [
       { t: 'Eu não sei de tudo que você atravessou.' },
       { t: 'Mesmo depois de tantas conversas sobre a vida, eu ainda conheço apenas partes do que você atravessou.' },
-      { t: 'Você me contou pedaços. Alguns eu entendi. Outros eu ouvi sem entender, achando que estava entendendo.' },
-      { t: 'Mas tem uma coisa que eu vi com meus olhos, e que eu não esqueço: você nunca parou.', e: 'forte' }
+      { t: 'Você me contou pedaços. Alguns eu entendi. Outros eu ouvi sem entender, achando que estava entendendo.' }
+    ]
+  },
+  {
+    id: 'nuncaDesistiu',
+    linhas: [
+      { t: 'Mas tem uma coisa que eu vi com meus olhos, e que eu não esqueço: você nunca parou e nunca desistiu.', e: 'forte' }
     ]
   },
   {
@@ -373,32 +383,15 @@ const JANELA_LEITURA = 24 * 60 * 60 * 1000;
 let estado = { restantes: CONFIG.leituras, destruida: false, inicio: Date.now() };
 
 function lerEstado() {
-  try {
-    const cru = localStorage.getItem(CHAVE);
-    if (cru) {
-      const s = JSON.parse(cru);
-      if (typeof s.restantes === 'number' && typeof s.inicio === 'number' && Date.now() - s.inicio < JANELA_LEITURA) {
-        estado = { restantes: s.restantes, destruida: !!s.destruida, inicio: s.inicio };
-      }
-    }
-  } catch (e) { /* modo privado: segue com o padrão */ }
-
-  if (param.has('reiniciar')) {
-    estado = { restantes: CONFIG.leituras, destruida: false, inicio: Date.now() };
-    gravar();
-  }
+  estado = { restantes: CONFIG.leituras, destruida: false, inicio: Date.now() };
 }
 
 function gravar() {
-  if (MODO_TESTE) return;
-  try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {}
+  // As exibições são registradas no servidor, para valerem em qualquer aparelho.
 }
 
 function consumirLeitura() {
-  if (MODO_TESTE) return;
-  estado.restantes = Math.max(0, estado.restantes - 1);
-  estado.destruida = estado.restantes === 0;
-  gravar();
+  // A vaga já foi reservada quando a experiência começou.
 }
 
 function rotuloLeituras() {
@@ -1486,11 +1479,32 @@ document.getElementById('abrir-carta').addEventListener('click', () => {
   document.getElementById('capa').hidden = true;
   document.getElementById('trilha-intro').hidden = false;
 }, { once: true });
-document.getElementById('comecar-com-som').addEventListener('click', () => {
-  document.getElementById('trilha-intro').hidden = true;
-  acordar();
-  montar(0);
-}, { once: true });
+let iniciandoLeitura = false;
+document.getElementById('comecar-com-som').addEventListener('click', async () => {
+  if (iniciandoLeitura) return;
+  iniciandoLeitura = true;
+  const botaoInicio = document.getElementById('comecar-com-som');
+  botaoInicio.disabled = true;
+  try {
+    if (!MODO_TESTE) {
+      const resposta = await fetch('/api/reading-access', { method: 'POST', cache: 'no-store' });
+      const acesso = await resposta.json();
+      if (!resposta.ok || !acesso.allowed) {
+        estado = { restantes: 0, destruida: true, inicio: Date.now() };
+        document.getElementById('trilha-intro').hidden = true;
+        montarResto(true);
+        return;
+      }
+      estado.restantes = Number(acesso.remaining) || 0;
+    }
+    document.getElementById('trilha-intro').hidden = true;
+    acordar();
+    montar(0);
+  } catch {
+    botaoInicio.disabled = false;
+    iniciandoLeitura = false;
+  }
+});
 
 if (MODO_TESTE) {
   const aviso = el('div', null, '');

@@ -4,7 +4,7 @@ const Interface = (() => {
   const voltar = document.getElementById('voltar');
   const statut = document.getElementById('leitura-status');
   const titres = {
-    abertura:'Antes de começar', nome:'A sua luz', dia:'A primavera', travessia:'A sua força',
+    abertura:'Antes de começar', nome:'A sua luz', dia:'A primavera', proposito:'Seguir em frente', travessia:'A sua força', nuncaDesistiu:'Você nunca desistiu',
     julia:'Júlia', maeLeoa:'Uma mãe leoa', fabio:'Fábio', depois:'As travessias', recomeco:'De pé, outra vez', forca:'De pé, outra vez',
     entrada:'A nossa história', fevereiro:'Onde tudo começou', encontroFolia:'O encontro', futuroFolia:'O que veio depois', recorte:'Uma noite para lembrar', depoisCarnaval:'Do bom-dia ao boa-noite', rotinaJuntos:'Parte um do outro', rotinaDela:'A sua rotina', responsabilidade:'A sua força', rotinaMinha:'A minha rotina', sintonia:'A nossa sintonia',
     apelido:'Um jeito só seu', ensinou:'O que ficou', planoJK:'Em seis meses', tempoOutro:'O tempo do outro', posicionamento:'O que descobri', ensinamento:'De graça', levar:'Para sempre', parteruim:'Nós dois', tatudobem:'E tá tudo bem',

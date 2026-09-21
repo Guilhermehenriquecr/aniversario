@@ -80,7 +80,7 @@ palavra: `mostrarVersos: true` no `CONFIG`.
 >
 > Foi no mesmo dia em que você chegou ao mundo. A primavera começou junto, como se o calendário tivesse guardado um sinal só seu.
 >
-> Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e ser feliz.
+> Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e seguir em frente.
 >
 ## 4. A travessia
 

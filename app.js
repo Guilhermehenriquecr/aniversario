@@ -65,7 +65,7 @@ const ROTEIRO = [
       { t: '22 de setembro de 1989. Uberlândia, Minas Gerais.' },
       { t: 'No fim da noite daquele dia, o sol cruzou a linha do equador e a primavera começou no Brasil.' },
       { t: 'Foi no mesmo dia em que você chegou ao mundo. A primavera começou junto, como se o calendário tivesse guardado um sinal só seu.' },
-      { t: 'Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e ser feliz.', e: 'forte' }
+      { t: 'Mas eu acho que combinou. Ao longo dos últimos anos, sua vida foi sobre recomeçar, se ancorar em um propósito e seguir em frente.', e: 'forte' }
     ]
   },
   {

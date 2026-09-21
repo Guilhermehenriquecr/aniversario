@@ -5,8 +5,8 @@ const Interface = (() => {
   const statut = document.getElementById('leitura-status');
   const titres = {
     abertura:'Antes de começar', nome:'A sua luz', dia:'A primavera', travessia:'A sua força',
-    julia:'Júlia', fabio:'Fábio', depois:'As travessias', forca:'De pé, outra vez',
-    fevereiro:'Onde tudo começou', recorte:'Uma noite para lembrar', depoisCarnaval:'Do bom-dia ao boa-noite',
+    julia:'Júlia', fabio:'Fábio', depois:'As travessias', recomeco:'De pé, outra vez', forca:'De pé, outra vez',
+    entrada:'A nossa história', fevereiro:'Onde tudo começou', recorte:'Uma noite para lembrar', depoisCarnaval:'Do bom-dia ao boa-noite',
     apelido:'Um jeito só seu', ensinou:'O que ficou', parteruim:'Nós dois', tatudobem:'E tá tudo bem',
     foto:'Pirenópolis', tentativa:'Valeu a pena', primavera:'A primavera volta', distancia:'Com calma',
     encontro:'Parte de uma família', gratidao:'Com carinho', fdeforca:'F, de força',

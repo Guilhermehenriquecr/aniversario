@@ -111,7 +111,12 @@ const ROTEIRO = [
     linhas: [
       { t: 'E aí veio mais uma provação.' },
       { t: 'Depois do Fábio, veio o câncer.' },
-      { t: 'Eu não sei como foram os dias por dentro disso, nem o que você ouviu ou chorou quando ninguém estava vendo.' },
+      { t: 'Eu não sei como foram os dias por dentro disso, nem o que você ouviu ou chorou quando ninguém estava vendo.' }
+    ]
+  },
+  {
+    id: 'recomeco',
+    linhas: [
       { t: 'Mas, do outro lado, estava você: de pé, inteira, com dois filhos e uma vida para cuidar.', e: 'forte' },
       { t: 'Você atravessou isso do jeito que conseguiu. E, ainda assim, continuou encontrando caminhos para recomeçar.', e: 'forte' }
     ]
@@ -126,10 +131,15 @@ const ROTEIRO = [
     ]
   },
   {
+    id: 'entrada',
+    linhas: [
+      { t: 'Agora deixa eu entrar na história. Porque essa parte tem a minha letra.', e: 'forte' }
+    ]
+  },
+  {
     id: 'fevereiro',
     confete: true,
     linhas: [
-      { t: 'Agora deixa eu entrar na história. Porque essa parte tem a minha letra.' },
       { t: 'Sábado, 7 de fevereiro de 2026. Folia Goiás, Avenida 85, Goiânia.' },
       { t: 'Trezentas e cinquenta mil pessoas na rua. E dentre trezentas e cinquenta mil, Deus nos colocou à frente.', e: 'forte' },
       { t: 'Era uma das datas que eu mais amo no ano. Eu não sabia ainda que ela ia me trazer um propósito.' }

@@ -131,7 +131,9 @@ propósito: eufemismo nesse caso costuma doer mais do que o nome.
 > Depois do Fábio, veio o câncer.
 >
 > Eu não sei como foram os dias por dentro disso, nem o que você ouviu ou chorou quando ninguém estava vendo.
->
+
+## 7.1. De pé, outra vez
+
 > Mas, do outro lado, estava você: de pé, inteira, com dois filhos e uma vida para cuidar.
 >
 > Você atravessou isso do jeito que conseguiu. E, ainda assim, continuou encontrando caminhos para recomeçar.
@@ -157,6 +159,8 @@ telas antes de virar o fecho.
 ## 9. Fevereiro
 
 *Entram confetes caindo e o brilho sobe.*
+
+## 9.1. A nossa história
 
 > Agora deixa eu entrar na história. Porque essa parte tem a minha letra.
 >

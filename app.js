@@ -270,7 +270,7 @@ const ROTEIRO = [
     id: 'escolhaOutraVez',
     linhas: [
       { t: 'Sem um acordo, sem dizer em voz alta, resolvemos tentar de novo.' },
-      { t: 'No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos um ao outro outra vez.', e: 'suave' }
+      { t: 'No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos tentar fazer acontecer novamente.', e: 'suave' }
     ]
   },
   {

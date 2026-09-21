@@ -246,7 +246,7 @@ verdadeiro.
 >
 > Mas ser só amigo era muito pouco para tudo o que a gente sentia.
 >
-> Sem um acordo, sem dizer em voz alta, resolvemos tentar de novo. No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos um ao outro outra vez.
+> Sem um acordo, sem dizer em voz alta, resolvemos tentar de novo. No fundo, nós dois sabíamos que provavelmente não iria funcionar. Ainda assim, por algum tempo, escolhemos tentar fazer acontecer novamente.
 
 O "E não deu" saiu daqui de propósito. Ele abre a tela seguinte, onde a frase
 pesa mais.

@@ -22,7 +22,7 @@ async function validCookie(value) {
 
 export default async function middleware(request) {
   const path = new URL(request.url).pathname;
-  if (path === '/acesso.html' || path.startsWith('/api/') || path === '/robots.txt' || path.startsWith('/_next/')) return;
+  if (path === '/acesso.html' || path === '/admin' || path === '/admin.html' || path.startsWith('/api/') || path === '/robots.txt' || path.startsWith('/_next/')) return;
   if (Date.now() > endOfTodaySaoPaulo()) return;
   const cookie = request.headers.get('cookie')?.match(/(?:^|;\s*)aniver-access=([^;]+)/)?.[1];
   if (await validCookie(cookie)) return;

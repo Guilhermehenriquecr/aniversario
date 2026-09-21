@@ -295,7 +295,7 @@ const ROTEIRO = [
   {
     id: 'bonsDesejos',
     linhas: [
-      { t: 'Prefiro continuar em silêncio por enquanto, mas sigo vibrando positivo por você.' },
+      { t: 'Prefiro continuar em silêncio, assentando minha nova vida e recebendo aquilo que há de melhor de Deus.' },
       { t: 'Torço para que a vida te trate com carinho, que seus caminhos se abram e que você continue encontrando paz.', e: 'forte' }
     ]
   },

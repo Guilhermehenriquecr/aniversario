@@ -2,13 +2,12 @@
    22 de setembro, experiência de leitura única
 
    Editar o texto:  mexa só em ROTEIRO
-   Testar sem gastar leituras:  ?teste=1
+   Pré-visualizar as cenas:  ?teste=1
    Pular direto para uma cena:  ?teste=1&ir=12
-   Zerar o contador:  ?reiniciar=1
    ========================================================= */
 
 const CONFIG = {
-  leituras: 3,                      // quantas vezes ela pode chegar ao fim
+  leituras: 3,                      // número exibido na mensagem, sem limite de aberturas
   mostrarAssinaturaDoTexto: true,   // revela o acróstico com o seu nome
   mostrarContadorNoInicio: true,    // "3 leituras restantes" na primeira tela
   mostrarVersos: false,             // a tela dos seis versos com o acróstico do nome dela
@@ -48,7 +47,7 @@ const ROTEIRO = [
       { t: 'Olá, Flávia.', e: 'nome' },
       { t: 'Hoje é 22 de setembro.', e: 'suave' },
       { t: 'Antes de começar, um detalhe: esta mensagem foi feita para durar só o tempo da leitura. Quando você chegar ao fim, ela desaparece.', e: 'aviso' },
-      { t: 'Você terá 3 vezes para assistir a ela, durante 24 horas.', e: 'suave' },
+      { t: 'Você terá 3 vezes para assistir a ela, até o fim de hoje.', e: 'suave' },
       { t: 'Senta. Vai com calma. Isso é sobre você.', e: 'forte' }
     ]
   },
@@ -386,21 +385,10 @@ const MIDIA = {
 
 const param = new URLSearchParams(location.search);
 const MODO_TESTE = param.has('teste');
-const CHAVE = 'setembro22:estado:v2';
-const JANELA_LEITURA = 24 * 60 * 60 * 1000;
-
 let estado = { restantes: CONFIG.leituras, destruida: false, inicio: Date.now() };
 
 function lerEstado() {
   estado = { restantes: CONFIG.leituras, destruida: false, inicio: Date.now() };
-}
-
-function gravar() {
-  // As exibições são registradas no servidor, para valerem em qualquer aparelho.
-}
-
-function consumirLeitura() {
-  // A vaga já foi reservada quando a experiência começou.
 }
 
 function rotuloLeituras() {
@@ -1180,7 +1168,6 @@ function destruir() {
   setTimeout(() => brilho.classList.add('on'), 1100);
 
   setTimeout(() => {
-    consumirLeitura();
     montarResto(false);
     ocupado = false;
   }, 2500);

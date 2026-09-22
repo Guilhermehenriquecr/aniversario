@@ -10,10 +10,9 @@ A trilha toca Aliança e depois O Destino Não Quis. Há pausa, volume e reduç�
 
 Há uma dissuasão de captura: impressão, salvar página, menu de contexto e alguns atalhos são bloqueados; ao sair da aba, a mensagem é ocultada. Isso dificulta capturas casuais, mas não pode impedir gravações feitas pelo sistema operacional ou por outro dispositivo.
 
-Verificação do fluxo: `node --test tests/experiencia.test.cjs`. Use `?teste=1` ao visualizar para preservar o contador de leituras.
+Verificação do fluxo: `node --test tests/experiencia.test.cjs tests/access-window.test.mjs`. Use `?teste=1` para pular diretamente para cenas durante a pré-visualização.
 
-Página única, sem build, sem dependência e sem banco de dados.
-É só HTML, CSS e JavaScript, por isso sobe na Vercel sem configuração nenhuma.
+A interface é HTML, CSS e JavaScript. O painel de visitas usa Redis no Vercel.
 
 ## Pré-visualizar aqui
 
@@ -27,12 +26,11 @@ Depois abra <http://localhost:4173/?teste=1>
 
 | Endereço | O que faz |
 | --- | --- |
-| `?teste=1` | Percorre tudo sem gastar nenhuma das 5 leituras |
-| `?teste=1&ir=12` | Pula direto para a tela 12 (a assinatura escondida) |
-| `?reiniciar=1` | Zera o contador e devolve as 5 leituras |
+| `?teste=1` | Pré-visualiza a leitura |
+| `?teste=1&ir=12` | Abre diretamente a cena indicada |
 
-**Use sempre `?teste=1` enquanto estiver mexendo.** Sem ele, cada vez que você
-chegar ao fim você queima uma leitura de verdade.
+O texto exibe “3 vezes”, mas não há limite de aberturas. Novas leituras podem
+começar até 23:59:59 de 22 de setembro de 2026, no horário de São Paulo.
 
 ## Publicar na Vercel
 

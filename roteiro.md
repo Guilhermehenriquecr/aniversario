@@ -56,7 +56,7 @@ palavra: `mostrarVersos: true` no `CONFIG`.
 >
 > **Antes de começar, um detalhe: esta mensagem foi feita para durar só o tempo da leitura. Quando você chegar ao fim, ela desaparece.**
 >
-> Você terá 3 vezes para assistir a ela, durante 24 horas.
+> Você terá 3 vezes para assistir a ela, até o fim de hoje.
 >
 > Senta. Vai com calma. Isso é sobre você.
 
@@ -367,12 +367,11 @@ linha só, para sempre:
 
 ---
 
-## Regras do contador
+## Janela de acesso
 
-- O contador só cai quando ela **chega ao fim**. Abrir, fechar, dar refresh ou
-  visitar de novo no meio do caminho não gasta nada.
-- São 3 leituras completas durante 24 horas. Depois disso, a mensagem se encerra de verdade.
-- Depois disso, a tela mostra apenas a frase final.
+O texto exibe “3 vezes”, mas não limita o número de aberturas. A leitura pode
+ser iniciada quantas vezes quiser no dia 22 de setembro de 2026, até
+23:59:59 (horário de São Paulo). A partir do dia 23, novas aberturas são bloqueadas.
 
 ## Fatos que estão no roteiro e de onde vieram
 

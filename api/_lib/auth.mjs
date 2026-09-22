@@ -21,14 +21,21 @@ export function sign(payload) {
   return `${encoded}.${signature}`;
 }
 
-export function validToken(req) {
-  const header = req.headers.get('authorization') || '';
-  const token = header.startsWith('Bearer ') ? header.slice(7) : '';
+export function adminCookie(token) {
+  return `aniver_admin=${token}; Path=/; Max-Age=86400; HttpOnly; Secure; SameSite=Lax`;
+}
+
+export function validSignedToken(token) {
   const [encoded, signature] = token.split('.');
   if (!encoded || !signature) return false;
   const expected = crypto.createHmac('sha256', SECRET).update(encoded).digest('base64url');
-  if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) return false;
+  if (signature.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) return false;
   try { return JSON.parse(Buffer.from(encoded, 'base64url').toString()).exp > Date.now(); } catch { return false; }
+}
+
+export function validToken(req) {
+  const header = req.headers.get('authorization') || '';
+  return validSignedToken(header.startsWith('Bearer ') ? header.slice(7) : '');
 }
 
 export function redisConfigured() {

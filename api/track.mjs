@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { body, json, redis, redisConfigured } from './_lib/auth.mjs';
+import { body, json, redis, redisConfigured, validSignedToken } from './_lib/auth.mjs';
 
 function device(ua = '') {
   if (/tablet|ipad/i.test(ua)) return 'Tablet';
@@ -12,6 +12,8 @@ function headerValue(value) {
 }
 
 export async function POST(req) {
+  const adminCookie = (req.headers.get('cookie') || '').split(';').map(part => part.trim()).find(part => part.startsWith('aniver_admin='));
+  if (adminCookie && validSignedToken(adminCookie.slice('aniver_admin='.length))) return json({ ok: true, ignored: true });
   if (!redisConfigured()) return json({ ok: false, setup: true });
   const input = await body(req);
   const ua = req.headers.get('user-agent') || '';

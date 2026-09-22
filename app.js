@@ -32,7 +32,6 @@ const RASTREAMENTO = (() => {
     const payload = { type, sessionId, sequence: ++sequencia, seenAt: new Date().toISOString(), width: innerWidth, height: innerHeight, ...extra };
     fila = fila.catch(() => {}).then(() => fetch('/api/track', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload), keepalive: true }));
   };
-  enviar('opened');
   return { enviar };
 })();
 
@@ -1495,6 +1494,7 @@ document.getElementById('comecar-com-som').addEventListener('click', async () =>
         return;
       }
       estado.restantes = Number(acesso.remaining) || 0;
+      RASTREAMENTO.enviar('opened');
     }
     document.getElementById('trilha-intro').hidden = true;
     acordar();

@@ -23,13 +23,15 @@ const CONFIG = {
 const RASTREAMENTO = (() => {
   if (typeof window === 'undefined' || typeof fetch !== 'function') return { enviar() {} };
   let sessionId = '';
+  let sequencia = 0;
+  let fila = Promise.resolve();
   try {
     sessionId = sessionStorage.getItem('aniver:session') || crypto.randomUUID();
     sessionStorage.setItem('aniver:session', sessionId);
   } catch { sessionId = `${Date.now()}-${Math.random().toString(36).slice(2)}`; }
   const enviar = (type, extra = {}) => {
-    const payload = { type, sessionId, width: innerWidth, height: innerHeight, ...extra };
-    fetch('/api/track', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload), keepalive: true }).catch(() => {});
+    const payload = { type, sessionId, sequence: ++sequencia, seenAt: new Date().toISOString(), width: innerWidth, height: innerHeight, ...extra };
+    fila = fila.catch(() => {}).then(() => fetch('/api/track', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload), keepalive: true }));
   };
   enviar('opened');
   return { enviar };

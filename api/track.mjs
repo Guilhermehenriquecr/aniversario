@@ -22,6 +22,8 @@ export async function POST(req) {
     id: crypto.randomUUID(),
     type: String(input.type || 'opened').slice(0, 24),
     sessionId: String(input.sessionId || '').slice(0, 80),
+    sequence: Number.isInteger(Number(input.sequence)) ? Number(input.sequence) : null,
+    seenAt: typeof input.seenAt === 'string' && !Number.isNaN(Date.parse(input.seenAt)) ? input.seenAt : null,
     slide: Number.isFinite(Number(input.slide)) ? Number(input.slide) : null,
     totalSlides: Number.isFinite(Number(input.totalSlides)) ? Number(input.totalSlides) : null,
     at: new Date().toISOString(),
